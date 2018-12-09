@@ -20,6 +20,10 @@
       </configuration>
       <facet type="Struts2" name="Struts 2">
         <configuration>
+          <fileset id="s2fileset" name="My Fileset" removed="false">
+            <file>file://$MODULE_DIR$/src/struts.xml</file>
+            <file>jar://$MODULE_DIR$/WebContent/WEB-INF/lib/struts2-core-2.3.16.1.jar!/struts-default.xml</file>
+          </fileset>
           <propertiesKeys disabled="false" />
         </configuration>
       </facet>
@@ -109,6 +113,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/WebContent/WEB-INF/lib/xwork-core-2.3.16.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/WebContent/WEB-INF/lib/mysql-connector-java-5.1.7-bin.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
