@@ -6,6 +6,7 @@ import com.xk.model.User;
 import com.xk.service.UserService;
 import javafx.application.Application;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class GetLoginUserAction implements Action {
@@ -24,8 +25,11 @@ public class GetLoginUserAction implements Action {
             //创建userService类，业务逻辑类
             UserService userService = new UserService();
             if(userService.checkUser(user)){
-                user = userService.getLoginUser(user);
-                ac.put("user", user);
+//                user = userService.getLoginUser(user);
+//                ac.put("user", user);
+                ArrayList<User> users = userService.getAllUsers();
+                ac.put("users", users);
+                ac.put("currentUser", user.getUsername());
                 return "success";
             }else{
                 return "error";
