@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>欢迎${user.getUsername()}登录</h1>
+
     <table border="1px" cellspacing="0" cellpadding="5">
         <tr>
             <td>${user.getId()}</td>
