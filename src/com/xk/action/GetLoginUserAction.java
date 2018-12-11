@@ -42,22 +42,20 @@ public class GetLoginUserAction implements Action {
     public String execute() {
         ActionContext ac = ActionContext.getContext();
 
-        if( username != null &&  password != null){
+        if (username != null && password != null) {
             user.setUsername(username);
             user.setPassword(password);
 
-            //创建userService类，业务逻辑类
             UserService userService = new UserService();
-            if(userService.checkUser(user)){
+            if (userService.checkUser(user)) {
                 ArrayList<User> users = userService.getAllUsers();
                 ac.put("users", users);
                 ac.put("currentUser", user.getUsername());
                 return "success";
-            }else{
+            } else {
                 return "error";
             }
-        }
-        else{
+        } else {
             return "error";
         }
     }
