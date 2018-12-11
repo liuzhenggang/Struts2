@@ -25,8 +25,6 @@ public class GetLoginUserAction implements Action {
             //创建userService类，业务逻辑类
             UserService userService = new UserService();
             if(userService.checkUser(user)){
-//                user = userService.getLoginUser(user);
-//                ac.put("user", user);
                 ArrayList<User> users = userService.getAllUsers();
                 ac.put("users", users);
                 ac.put("currentUser", user.getUsername());
