@@ -7,7 +7,11 @@
     <title>xkUser</title>
 </head>
 <body>
+<<<<<<< HEAD
     <h1>欢迎${currentUser}登录</h1>
+=======
+    <h1>欢迎<s:property value="#currentUser" />登录</h1>
+>>>>>>> 810dc95c998d5e6e2eb24e8d88b697d773ef7251
     <table border="1px" cellspacing="0" cellpadding="5">
         <tr>
             <td>ID</td>
@@ -17,6 +21,7 @@
             <td>身份</td>
         </tr>
         <s:iterator id="user" value="users" status="status">
+<<<<<<< HEAD
             <s:set var="id" value="#user.id" />
             <s:set var="username" value="#user.username" />
             <s:set var="password" value="#user.password" />
@@ -28,6 +33,14 @@
                 <td><s:property value="#password" /></td>
                 <td><s:property value="#email" /></td>
                 <td><s:property value="#identity" /></td>
+=======
+            <tr>
+                <td><s:property value="#user.id" /></td>
+                <td><s:property value="#user.username" /></td>
+                <td><s:property value="#user.password" /></td>
+                <td><s:property value="#user.email" /></td>
+                <td><s:property value="#user.identity" /></td>
+>>>>>>> 810dc95c998d5e6e2eb24e8d88b697d773ef7251
             </tr>
         </s:iterator>
     </table>
