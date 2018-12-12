@@ -12,14 +12,20 @@ public class UserDao {
     public boolean checkUser(User user) {
         String sql = "select * from user where username = ? and password = ?";
         String[] parameters = {user.getUsername(), user.getPassword()};
-        return executeSql(sql, parameters);
+        return executeQuery(sql, parameters);
     }
 
     //addUser
     public boolean addUser(User user) {
-        String sql = "insert into user(`username`,`password`,`email`,`identity`) values (?,?,?,?)";
+        String sql = "insert into user(`id`,`username`,`password`,`email`,`identity`) values (0,?,?,?,?)";
         String[] parameters = {user.getUsername(), user.getPassword(), user.getEmail(), user.getIdentity()};
-        return executeSql(sql, parameters);
+        return executeUpd(sql, parameters);
+    }
+
+    //delUser
+    public boolean delUser(int id) {
+        String sql = "delete from user where user.id =" + id;
+        return executeUpd(sql, null);
     }
 
     //getAllUsers
@@ -41,7 +47,17 @@ public class UserDao {
         return allUsers;
     }
 
-    private boolean executeSql(String sql, String[] parameters){
+    private boolean executeUpd(String sql, String[] parameters){
+        try{
+            SQLHelper.executeUpdate(sql, parameters);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private boolean executeQuery(String sql, String[] parameters){
         boolean flag = false;
         ResultSet rs = SQLHelper.executeQuery(sql, parameters);
         try {

@@ -73,6 +73,8 @@ public class SQLHelper {
 					ps.setString(i + 1, parameters[i]);
 				}
 				ps.executeUpdate();
+			}else{
+				ps.executeUpdate();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

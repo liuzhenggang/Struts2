@@ -19,17 +19,22 @@
         <action name="getUser" class="com.xk.action.GetUserAction" method="execute">
             <result name="success">/main.jsp</result>
         </action>
-        <action name="getLoginUser" class="com.xk.action.GetLoginUserAction" method="execute">
+        <action name="getLoginUser" class="com.xk.action.UserAction" method="execute">
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
         <action name="addUser" class="com.xk.action.UserAction" method="add">
-            <result>/userAddSuccess.jsp</result>
+            <result name="success">/userAddSuccess.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
         <action name="delUser" class="com.xk.action.UserAction" method="delete">
-            <result>/userDelSuccess.jsp</result>
+            <result name="success">/userDelSuccess.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
-
+        <action name="editUser" class="com.xk.action.UserAction" method="update">
+            <result name="success">/userUpdSuccess.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
     </package>
 
 </struts>
