@@ -15,6 +15,7 @@
             <td>密码</td>
             <td>邮箱</td>
             <td>身份</td>
+            <td>操作</td>
         </tr>
         <s:iterator id="user" value="users" status="status">
             <tr>
@@ -23,6 +24,9 @@
                 <td><s:property value="#user.password" /></td>
                 <td><s:property value="#user.email" /></td>
                 <td><s:property value="#user.identity" /></td>
+                <%--<td><s:url action='editUser' /></td>--%>
+                <%--<td><s:url action='delUser' /></td>--%>
+
             </tr>
         </s:iterator>
     </table>
