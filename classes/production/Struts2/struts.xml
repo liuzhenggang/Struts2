@@ -31,7 +31,10 @@
             <result name="success">/userDelSuccess.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
-
+        <action name="editUser" class="com.xk.action.UserAction" method="update">
+            <result name="success">/userUpdSuccess.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
     </package>
 
 </struts>

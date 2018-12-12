@@ -11,7 +11,6 @@
     <%--<input type = "hidden" name="user" value=${user} />--%>
     <table border="1px" cellspacing="0" cellpadding="5">
         <tr>
-            <td>ID</td>
             <td>名称</td>
             <td>密码</td>
             <td>邮箱</td>
@@ -24,7 +23,7 @@
                 <td><s:property value="#user.password" /></td>
                 <td><s:property value="#user.email" /></td>
                 <td><s:property value="#user.identity" /></td>
-                <%--<td><a href="delUser?id=<s:property value="#user.id"/>">删除</a></td>--%>
+                <%--<td><a href="editUser.action?id=<s:property value="#user.id"/>">编辑</a></td>--%>
                 <td><a href="delUser.action?id=<s:property value="#user.id"/>">删除</a></td>
             </tr>
         </s:iterator>
