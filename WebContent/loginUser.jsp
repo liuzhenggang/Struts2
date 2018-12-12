@@ -24,12 +24,13 @@
                 <td><s:property value="#user.password" /></td>
                 <td><s:property value="#user.email" /></td>
                 <td><s:property value="#user.identity" /></td>
-                <%--<td><s:url action='editUser' /></td>--%>
+                <%--<td><s:url action='' /></td>--%>
                 <%--<td><s:url action='delUser' /></td>--%>
 
             </tr>
         </s:iterator>
     </table>
+    <p><a href="userAdd.jsp">新增用户</a></p>
     <p><a href="index.jsp">返回首页</a></p>
 </body>
 </html>

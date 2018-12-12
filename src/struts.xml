@@ -23,10 +23,10 @@
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
-        <action name="useradd" class="com.xk.action.UserAction" method="add">
+        <action name="addUser" class="com.xk.action.UserAction" method="add">
             <result>/userAddSuccess.jsp</result>
         </action>
-        <action name="userdel" class="com.xk.action.UserAction" method="delete">
+        <action name="delUser" class="com.xk.action.UserAction" method="delete">
             <result>/userDelSuccess.jsp</result>
         </action>
 
