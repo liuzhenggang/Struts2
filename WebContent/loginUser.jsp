@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>欢迎<s:property value="#currentUser" />登录</h1>
-    <%--<input type = "hidden" name="user" value=${user} />--%>
     <table border="1px" cellspacing="0" cellpadding="5">
         <tr>
             <td>名称</td>
