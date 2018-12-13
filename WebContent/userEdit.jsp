@@ -23,8 +23,8 @@
         <label for="email">邮箱：</label>
         <input id="email" type="text" name="user.email" value=${user.email}> <br/>
         <label for="identity">身份：</label>
-        <input id="identity" name="user.identity" type="radio" value="user" />user
-        <input type="radio"  name="user.identity" value="admin" />admin <br/>
+        <input id="identity" name="user.identity" type="radio" value="user" checked=<s:if test="user.identity=='user'"> "checked" </s:if> />user
+        <input type="radio"  name="user.identity" value="admin" <s:if test="user.identity=='admin'"> checked="checked" </s:if> />admin <br/>
 
         <input type="submit" value="更新"/>
     </s:form>

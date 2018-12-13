@@ -27,7 +27,6 @@ public class UserAction  extends ActionSupport {
         if (username != null && password != null) {
             user.setUsername(username);
             user.setPassword(password);
-
             if (userService.checkUser(user)) {
                 ArrayList<User> users = userService.getAllUsers();
                 ac.getSession().put("currentUser", user.getUsername());
@@ -42,8 +41,11 @@ public class UserAction  extends ActionSupport {
     }
 
     public String add(){
+        ActionContext ac = ActionContext.getContext();
         userService = new UserService();
         if(userService.addUser(user)){
+            ArrayList<User> users = userService.getAllUsers();
+            ac.put("users", users);
             return SUCCESS;
         }
         return ERROR;
@@ -62,7 +64,6 @@ public class UserAction  extends ActionSupport {
 
     public String edit(){
         userService = new UserService();
-
         if(id != -1){
             user = userService.getUserById(id);
             return SUCCESS;
@@ -72,7 +73,6 @@ public class UserAction  extends ActionSupport {
 
     public String upd(){
         ActionContext ac = ActionContext.getContext();
-
         userService = new UserService();
         if(userService.updUser(user)){
             ArrayList<User> users = userService.getAllUsers();

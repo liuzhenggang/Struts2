@@ -9,11 +9,11 @@ public class PermissionInterceptor implements Interceptor {
         Object users = ActionContext.getContext().get("users");
         if (users != null){
             invocation.invoke();
+            return "success";
         }else{
             ActionContext.getContext().put("message","没有权限");
+            return "message";
         }
-        return "message";
-
     }
     public void destroy(){
 
