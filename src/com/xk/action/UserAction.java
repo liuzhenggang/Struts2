@@ -30,8 +30,8 @@ public class UserAction  extends ActionSupport {
 
             if (userService.checkUser(user)) {
                 ArrayList<User> users = userService.getAllUsers();
+                ac.getSession().put("currentUser", user.getUsername());
                 ac.put("users", users);
-                ac.put("currentUser", user.getUsername());
                 return SUCCESS;
             } else {
                 return ERROR;
@@ -52,6 +52,10 @@ public class UserAction  extends ActionSupport {
     public String delete(){
         userService = new UserService();
         if(id != -1 && userService.delUser(id)){
+            ActionContext ac = ActionContext.getContext();
+            ArrayList<User> users = userService.getAllUsers();
+            ac.getSession().put("currentUser", user.getUsername());
+            ac.put("users", users);
             return SUCCESS;
         }
         return ERROR;

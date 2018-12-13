@@ -97,7 +97,7 @@ public class UserDao {
 
     private User setUserInfo(User user, ResultSet rs){
         try{
-            user.setId(rs.getString( 1));
+            user.setId(rs.getInt( 1));
             user.setUsername(rs.getString(2));
             user.setPassword(rs.getString(3));
             user.setEmail(rs.getString(4));
