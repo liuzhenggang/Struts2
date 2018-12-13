@@ -17,7 +17,7 @@ public class GetUserAction implements Action {
         ActionContext ac = ActionContext.getContext();
         ac.put("user", user);
         ac.put("user2", user2);
-        return "success";
+        return SUCCESS;
     }
 
     public User getUser() {

@@ -17,28 +17,37 @@
             <result>/index.jsp</result>
         </action>
         <action name="getUser" class="com.xk.action.GetUserAction" method="execute">
+            <interceptor-ref name="permissionStack"/>
             <result name="success">/main.jsp</result>
+            <result name="message">/message.jsp</result>
         </action>
         <action name="getLoginUser" class="com.xk.action.UserAction" method="execute">
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
         <action name="addUser" class="com.xk.action.UserAction" method="add">
+            <interceptor-ref name="permissionStack"/>
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
+            <result name="message">/message.jsp</result>
         </action>
         <action name="delUser" class="com.xk.action.UserAction" method="delete">
+            <interceptor-ref name="permissionStack"/>
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
+            <result name="message">/message.jsp</result>
         </action>
         <action name="editUser" class="com.xk.action.UserAction" method="edit">
+            <interceptor-ref name="permissionStack"/>
             <result name="success">/userEdit.jsp</result>
             <result name="error">/error.jsp</result>
+            <result name="message">/message.jsp</result>
         </action>
         <action name="updUser" class="com.xk.action.UserAction" method="upd">
+            <interceptor-ref name="permissionStack"/>
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
+            <result name="message">/message.jsp</result>
         </action>
     </package>
-
 </struts>
