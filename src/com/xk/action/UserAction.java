@@ -57,9 +57,23 @@ public class UserAction  extends ActionSupport {
         return ERROR;
     }
 
-    public String update(){
+    public String edit(){
+        ActionContext ac = ActionContext.getContext();
         userService = new UserService();
-        if(id != -1 && userService.updUser(id)){
+
+        if(id != -1){
+            user = userService.getUserById(id);
+            return SUCCESS;
+        }
+        return ERROR;
+    }
+
+    public String upd(){
+        ActionContext ac = ActionContext.getContext();
+        userService = new UserService();
+
+        if(id != -1){
+            userService.updUser(user);
             return SUCCESS;
         }
         return ERROR;

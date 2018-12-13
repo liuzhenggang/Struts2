@@ -29,9 +29,15 @@ public class UserService {
     }
 
     //updUser
-    public boolean updUser(int id) {
+    public boolean updUser(User user) {
         userDao = new UserDao();
-        return userDao.delUser(id);
+        return userDao.updUser(user);
+    }
+
+    //getUserById
+    public User getUserById(int id) {
+        userDao = new UserDao();
+        return userDao.getUserById(id);
     }
 
     //getAllUsers

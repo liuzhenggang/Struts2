@@ -64,13 +64,13 @@ public class SQLHelper {
 		return rs;
 	}
 
-	public static void executeUpdate(String sql, String[] parameters) {
+	public static void executeUpdate(String sql, Object[] parameters) {
 		try {
 			ct = getConnection();
 			ps = ct.prepareStatement(sql);
 			if (parameters != null) {
 				for (int i = 0; i < parameters.length; i++) {
-					ps.setString(i + 1, parameters[i]);
+					ps.setString(i + 1, parameters[i].toString());
 				}
 				ps.executeUpdate();
 			}else{

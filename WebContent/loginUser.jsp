@@ -22,7 +22,7 @@
                 <td><s:property value="#user.password" /></td>
                 <td><s:property value="#user.email" /></td>
                 <td><s:property value="#user.identity" /></td>
-                <%--<td><a href="editUser.action?id=<s:property value="#user.id"/>">编辑</a></td>--%>
+                <td><a href="editUser.action?id=<s:property value="#user.id"/>">编辑</a></td>
                 <td><a href="delUser.action?id=<s:property value="#user.id"/>">删除</a></td>
             </tr>
         </s:iterator>

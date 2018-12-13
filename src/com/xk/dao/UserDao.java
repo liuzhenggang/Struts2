@@ -10,9 +10,21 @@ import java.util.ArrayList;
 public class UserDao {
     //checkUser
     public boolean checkUser(User user) {
+        boolean flag = false;
         String sql = "select * from user where username = ? and password = ?";
         String[] parameters = {user.getUsername(), user.getPassword()};
-        return executeQuery(sql, parameters);
+
+        ResultSet rs = SQLHelper.executeQuery(sql, parameters);
+        try {
+            while (rs.next()) {
+                flag = true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            SQLHelper.close(rs, SQLHelper.getPs(), SQLHelper.getCt());
+        }
+        return flag;
     }
 
     //addUser
@@ -26,6 +38,32 @@ public class UserDao {
     public boolean delUser(int id) {
         String sql = "delete from user where user.id =" + id;
         return executeUpd(sql, null);
+    }
+
+    //updUser
+    public boolean updUser(User user) {
+        String sql = "update user set username = ? , password = ?, email = ?, identity = ? where id = ?";
+        Object[] parameters = {user.getUsername(), user.getPassword(), user.getEmail(), user.getIdentity(), user.getId()};
+        return executeUpd(sql, parameters);
+    }
+
+    //getAllUsers
+    public User getUserById(int id) {
+        User user = new User();
+        User userRs = new User();
+        String sql = "select * from user where user.id =" + id;
+        String[] parameters = null;
+        ResultSet rs = SQLHelper.executeQuery(sql, parameters);
+        try {
+            while (rs.next()) {
+                userRs = setUserInfo(user, rs);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            SQLHelper.close(rs, SQLHelper.getPs(), SQLHelper.getCt());
+        }
+        return userRs;
     }
 
     //getAllUsers
@@ -47,7 +85,7 @@ public class UserDao {
         return allUsers;
     }
 
-    private boolean executeUpd(String sql, String[] parameters){
+    private boolean executeUpd(String sql, Object[] parameters){
         try{
             SQLHelper.executeUpdate(sql, parameters);
             return true;
@@ -55,21 +93,6 @@ public class UserDao {
             e.printStackTrace();
             return false;
         }
-    }
-
-    private boolean executeQuery(String sql, String[] parameters){
-        boolean flag = false;
-        ResultSet rs = SQLHelper.executeQuery(sql, parameters);
-        try {
-            if (rs.next()) {
-                flag = true;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            SQLHelper.close(rs, SQLHelper.getPs(), SQLHelper.getCt());
-        }
-        return flag;
     }
 
     private User setUserInfo(User user, ResultSet rs){
