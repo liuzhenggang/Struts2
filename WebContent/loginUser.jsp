@@ -7,7 +7,7 @@
     <title>xkUser</title>
 </head>
 <body>
-    <h1>欢迎<s:property value="#currentUser" />登录</h1>
+<h1>欢迎<s:property value="#session.currentUser" />登录</h1>
     <table border="1px" cellspacing="0" cellpadding="5">
         <tr>
             <td>名称</td>
@@ -22,8 +22,7 @@
                 <td><s:property value="#user.password" /></td>
                 <td><s:property value="#user.email" /></td>
                 <td><s:property value="#user.identity" /></td>
-                <td><a href="editUser.action?id=<s:property value="#user.id"/>">编辑</a></td>
-                <td><a href="delUser.action?id=<s:property value="#user.id"/>">删除</a></td>
+                <td><a href="editUser.action?id=<s:property value="#user.id"/>">编辑</a><a href="delUser.action?id=<s:property value="#user.id"/>">删除</a></td>
             </tr>
         </s:iterator>
     </table>

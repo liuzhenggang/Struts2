@@ -24,7 +24,7 @@
             <result name="error">/error.jsp</result>
         </action>
         <action name="addUser" class="com.xk.action.UserAction" method="add">
-            <result name="success">/userAddSuccess.jsp</result>
+            <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
         <action name="delUser" class="com.xk.action.UserAction" method="delete">
@@ -36,7 +36,7 @@
             <result name="error">/error.jsp</result>
         </action>
         <action name="updUser" class="com.xk.action.UserAction" method="upd">
-            <result name="success">/userUpdSuccess.jsp</result>
+            <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
     </package>

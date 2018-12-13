@@ -12,7 +12,7 @@ public class UserAction  extends ActionSupport {
     private static final long serialVersionUID = 8L;
 
     private User user = new User();
-    private int id = -1;
+    private Integer id = -1;
     private String username;
     private String password;
     private String email;
@@ -54,7 +54,6 @@ public class UserAction  extends ActionSupport {
         if(id != -1 && userService.delUser(id)){
             ActionContext ac = ActionContext.getContext();
             ArrayList<User> users = userService.getAllUsers();
-            ac.getSession().put("currentUser", user.getUsername());
             ac.put("users", users);
             return SUCCESS;
         }
@@ -62,7 +61,6 @@ public class UserAction  extends ActionSupport {
     }
 
     public String edit(){
-        ActionContext ac = ActionContext.getContext();
         userService = new UserService();
 
         if(id != -1){
@@ -74,13 +72,14 @@ public class UserAction  extends ActionSupport {
 
     public String upd(){
         ActionContext ac = ActionContext.getContext();
-        userService = new UserService();
 
-        if(id != -1){
-            userService.updUser(user);
+        userService = new UserService();
+        if(userService.updUser(user)){
+            ArrayList<User> users = userService.getAllUsers();
+            ac.put("users", users);
             return SUCCESS;
         }
-        return ERROR;
+            return ERROR;
     }
 
     public User getUser() {

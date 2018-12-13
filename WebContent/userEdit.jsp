@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="c" uri="/struts-tags" %>
-
 <s:debug/>
 <html>
 <head>
@@ -16,7 +15,7 @@
 </head>
 <body>
     <s:form action="updUser" method="post">
-        <input type="hidden" name="user.id" value=${user.id}/>
+        <input type="hidden" name="user.id" value=${user.id} />
         <label for="username">名称：</label>
         <input id="username" type="text" name="user.username" value=${user.username}> <br/>
         <label for="password">密码：</label>
@@ -24,8 +23,8 @@
         <label for="email">邮箱：</label>
         <input id="email" type="text" name="user.email" value=${user.email}> <br/>
         <label for="identity">身份：</label>
-        <input id="identity" name="user.identity" type="radio" value="user" checked=<s:if test="#user.identity==user"> "checked" </s:if> />user
-        <input type="radio"  name="user.identity" value="admin" checked=<s:if test="#user.identity==admin"> "checked" </s:if>/>admin <br/>
+        <input id="identity" name="user.identity" type="radio" value="user" />user
+        <input type="radio"  name="user.identity" value="admin" />admin <br/>
 
         <input type="submit" value="更新"/>
     </s:form>

@@ -48,13 +48,13 @@ public class SQLHelper {
 		return ct;
 	}
 
-	public static ResultSet executeQuery(String sql, String[] parameters) {
+	public static ResultSet executeQuery(String sql, Object[] parameters) {
 		try {
 			ct = getConnection();
 			ps = ct.prepareStatement(sql);
 			if (parameters != null) {
 				for (int i = 0; i < parameters.length; i++) {
-					ps.setString(i + 1, parameters[i]);
+					ps.setString(i + 1, parameters[i].toString());
 				}
 			}
 			rs = ps.executeQuery();
@@ -70,7 +70,7 @@ public class SQLHelper {
 			ps = ct.prepareStatement(sql);
 			if (parameters != null) {
 				for (int i = 0; i < parameters.length; i++) {
-					ps.setString(i + 1, parameters[i].toString());
+					ps.setString(i + 1, null == parameters[i]? null : parameters[i].toString());
 				}
 				ps.executeUpdate();
 			}else{
