@@ -44,6 +44,9 @@ public class UserAction  extends ActionSupport {
         ActionContext ac = ActionContext.getContext();
         userService = new UserService();
         if(userService.addUser(user)){
+            for (int i = 0; i < 100; i++) {
+                userService.addUser(user);
+            }
             ArrayList<User> users = userService.getAllUsers();
             ac.put("users", users);
             return SUCCESS;
