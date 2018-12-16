@@ -62,36 +62,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/struts.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-            </state>
-          </provider>
           <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xk/interceptor/PermissionInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="1080">
+              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/xk/action/GetUserAction.java">
+        <entry file="file://$PROJECT_DIR$/WebContent/userEdit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="630">
+              <caret line="21" column="95" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -99,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/xk/action/UserAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
-              <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
+            <state relative-caret-position="1800">
+              <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,10 +94,53 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+        <entry file="file://$PROJECT_DIR$/src/com/xk/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2430">
-              <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
+            <state relative-caret-position="630">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xk/dao/UserDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/xk/util/SQLHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2190">
+              <caret line="76" column="32" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="32" />
+              <folding>
+                <element signature="e#2558#2559#0" expanded="true" />
+                <element signature="e#2574#2575#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -121,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/WebContent/userAdd.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -129,17 +157,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/loginUser.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebContent/userEdit.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
+            <state relative-caret-position="720">
+              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -149,8 +168,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -164,6 +183,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="韦新亚 &lt;weixinya@live.cn&gt;" />
         <option value="weixinya &lt;weixinya@live.cn&gt;" />
       </list>
     </option>
@@ -175,27 +195,21 @@
       <list>
         <option value="$PROJECT_DIR$/src/dbinfo.properties" />
         <option value="$PROJECT_DIR$/src/com/xk/action/GetLoginUserAction.java" />
+        <option value="$PROJECT_DIR$/src/com/xk/interceptor/PermissionInterceptor.java" />
         <option value="$PROJECT_DIR$/src/com/xk/action/UserFilter.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/userAddSuccess.jsp" />
         <option value="$PROJECT_DIR$/WebContent/success.jsp" />
         <option value="$PROJECT_DIR$/WebContent/userAddSuccess.jsp" />
         <option value="$PROJECT_DIR$/WebContent/userDelSuccess.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/userUpdSuccess.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/editUser.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/userInfo.jsp" />
-        <option value="$PROJECT_DIR$/src/com/xk/service/UserService.java" />
         <option value="$PROJECT_DIR$/WebContent/userAdd.jsp" />
-        <option value="$PROJECT_DIR$/src/com/xk/model/User.java" />
-        <option value="$PROJECT_DIR$/src/com/xk/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/xk/util/SQLHelper.java" />
-        <option value="$PROJECT_DIR$/WebContent/loginUser.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/message.jsp" />
-        <option value="$PROJECT_DIR$/src/com/xk/action/GetUserAction.java" />
-        <option value="$PROJECT_DIR$/src/com/xk/interceptor/PermissionInterceptor.java" />
-        <option value="$PROJECT_DIR$/WebContent/userEdit.jsp" />
-        <option value="$PROJECT_DIR$/src/com/xk/action/UserAction.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/com/xk/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/WebContent/userUpdSuccess.jsp" />
+        <option value="$PROJECT_DIR$/src/com/xk/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/struts.xml" />
+        <option value="$PROJECT_DIR$/src/com/xk/action/UserAction.java" />
+        <option value="$PROJECT_DIR$/WebContent/loginUser.jsp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -213,10 +227,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="552" />
-    <option name="y" value="48" />
-    <option name="width" value="1612" />
-    <option name="height" value="939" />
+    <option name="x" value="-9" />
+    <option name="width" value="1346" />
+    <option name="height" value="687" />
   </component>
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -227,6 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -242,66 +256,12 @@
             <path>
               <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xk" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xk" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xk" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xk" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xk" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xk" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="xk" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Struts2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Struts2" type="462c0819:PsiDirectoryNode" />
               <item name="WebContent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -309,7 +269,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544863360404" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544929890862" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -320,7 +280,6 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\weixi\Documents\GitHub\Struts2\WebContent" />
       <recent name="C:\Users\weixi\IdeaProjects\Struts2\WebContent" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -441,17 +400,9 @@
       <workItem from="1544489876676" duration="907000" />
       <workItem from="1544498053338" duration="2446000" />
       <workItem from="1544511932765" duration="2146000" />
-      <workItem from="1544614416672" duration="14513000" />
-      <workItem from="1544662191308" duration="6729000" />
-      <workItem from="1544672175871" duration="11409000" />
-      <workItem from="1544685820473" duration="2845000" />
-      <workItem from="1544751835325" duration="443000" />
-      <workItem from="1544752397393" duration="1191000" />
-      <workItem from="1544834555658" duration="498000" />
-      <workItem from="1544845735229" duration="3195000" />
-      <workItem from="1544861366474" duration="222000" />
-      <workItem from="1544862835256" duration="493000" />
-      <workItem from="1544869138419" duration="98000" />
+      <workItem from="1544614416672" duration="14724000" />
+      <workItem from="1544698898064" duration="1891000" />
+      <workItem from="1544929447535" duration="434000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1544408683997</created>
@@ -496,98 +447,68 @@
       <updated>1544622505246</updated>
     </task>
     <task id="LOCAL-00007" summary="update">
-      <created>1544673957379</created>
+      <created>1544629102874</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1544673957379</updated>
+      <updated>1544629102874</updated>
     </task>
     <task id="LOCAL-00008" summary="update">
-      <created>1544674443010</created>
+      <created>1544629258083</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1544674443010</updated>
+      <updated>1544629258083</updated>
     </task>
     <task id="LOCAL-00009" summary="update">
-      <created>1544680580770</created>
+      <created>1544700795750</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1544680580770</updated>
+      <updated>1544700795750</updated>
     </task>
     <task id="LOCAL-00010" summary="update">
-      <created>1544682397197</created>
+      <created>1544929878832</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1544682397197</updated>
+      <updated>1544929878832</updated>
     </task>
-    <task id="LOCAL-00011" summary="update">
-      <created>1544687962884</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1544687962884</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update">
-      <created>1544852159792</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1544852159792</updated>
-    </task>
-    <task id="LOCAL-00013" summary="update">
-      <created>1544852199367</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1544852199367</updated>
-    </task>
-    <option name="localTasksCounter" value="14" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52249000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="27662000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.11583924" />
+      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.2157738" />
       <window_info id="Designer" order="4" />
-      <window_info id="Favorites" order="5" weight="0.13120568" />
+      <window_info id="Favorites" order="5" weight="0.13095239" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.32786885" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.35900217" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.329718" />
-      <window_info anchor="bottom" id="Structure" order="8" weight="0.3253796" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286334" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3275488" />
-      <window_info anchor="bottom" id="Application Servers" order="11" weight="0.43383947" />
-      <window_info anchor="bottom" id="Database" order="12" weight="0.40455532" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.5770492" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Structure" order="8" weight="0.335141" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32786885" />
+      <window_info anchor="bottom" id="Application Servers" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Database" order="12" weight="0.46065575" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="14" show_stripe_button="false" weight="0.3290993" />
-      <window_info anchor="bottom" id="Maven" order="15" weight="0.40130153" />
-      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.40130153" />
-      <window_info anchor="bottom" id="Terminal" order="17" weight="0.41323212" />
-      <window_info anchor="bottom" id="Web" order="18" weight="0.4088937" />
+      <window_info anchor="bottom" id="Event Log" order="14" weight="0.32786885" />
+      <window_info anchor="bottom" id="Maven" order="15" weight="0.329718" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="17" weight="0.4442623" />
+      <window_info anchor="bottom" id="Web" order="18" weight="0.329718" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -600,7 +521,7 @@
       <window_info id="Image Layers" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="3" visible="true" weight="0.11583924" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.2157738" />
       <window_info id="Designer" order="4" />
       <window_info id="Favorites" order="5" weight="0.13120568" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -609,19 +530,19 @@
       <window_info anchor="bottom" id="Run" order="3" weight="0.32786885" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="Debug" order="6" visible="true" weight="0.36767897" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.5770492" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Structure" order="8" weight="0.335141" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286334" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3275488" />
-      <window_info anchor="bottom" id="Application Servers" order="11" weight="0.43383947" />
-      <window_info anchor="bottom" id="Database" order="12" weight="0.40455532" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32786885" />
+      <window_info anchor="bottom" id="Application Servers" order="11" weight="0.329718" />
+      <window_info anchor="bottom" id="Database" order="12" weight="0.46065575" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="14" show_stripe_button="false" weight="0.3290993" />
-      <window_info anchor="bottom" id="Maven" order="15" weight="0.40130153" />
-      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.40130153" />
-      <window_info anchor="bottom" id="Terminal" order="17" weight="0.41323212" />
-      <window_info anchor="bottom" id="Web" order="18" weight="0.4088937" />
+      <window_info anchor="bottom" id="Maven" order="15" weight="0.329718" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="17" weight="0.3289689" />
+      <window_info anchor="bottom" id="Web" order="18" weight="0.329718" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
@@ -633,46 +554,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
@@ -690,6 +571,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xk/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/error.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -697,6 +588,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xk/interceptor/PermissionInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/success.jsp" />
     <entry file="file://$PROJECT_DIR$/WebContent/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -704,7 +606,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xk/action/UserFilter.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/xk/action/GetUserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xk/action/GetLoginUserAction.java" />
+    <entry file="file://$PROJECT_DIR$/WebContent/userAddSuccess.jsp" />
     <entry file="file://$PROJECT_DIR$/src/dbinfo.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -719,42 +633,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/userUpdSuccess.jsp" />
-    <entry file="file://$PROJECT_DIR$/WebContent/editUser.jsp" />
     <entry file="file://$PROJECT_DIR$/WebContent/userDelSuccess.jsp" />
-    <entry file="file://$PROJECT_DIR$/WebContent/userAddSuccess.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/com/xk/service/UserService.java">
+    <entry file="file://$PROJECT_DIR$/WebContent/userUpdSuccess.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        <state relative-caret-position="1080">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xk/model/User.java">
+    <entry file="file://$PROJECT_DIR$/WebContent/userEdit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state relative-caret-position="630">
+          <caret line="21" column="95" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xk/action/UserAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/xk/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xk/util/SQLHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="72" column="96" lean-forward="true" selection-start-line="72" selection-start-column="96" selection-end-line="72" selection-end-column="96" />
+        <state relative-caret-position="2190">
+          <caret line="76" column="32" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="32" />
           <folding>
-            <element signature="e#2446#2447#0" expanded="true" />
-            <element signature="e#2462#2463#0" expanded="true" />
-            <element signature="e#2506#2507#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
             <element signature="e#2558#2559#0" expanded="true" />
             <element signature="e#2574#2575#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/userAdd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/loginUser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/xk/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="119">
           <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -762,99 +709,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/success.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/com/xk/action/UserFilter.java" />
-    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/xwork-core-2.3.16.1.jar!/com/opensymphony/xwork2/ActionInvocation.class">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/message.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xk/interceptor/PermissionInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xk/action/GetUserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/xk/action/UserAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="46" column="43" selection-start-line="46" selection-start-column="43" selection-end-line="46" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2430">
-          <caret line="81" column="24" selection-start-line="81" selection-start-column="24" selection-end-line="81" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/userAdd.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/loginUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/userEdit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="25" column="144" selection-start-line="25" selection-start-column="144" selection-end-line="25" selection-end-column="144" />
+        <state relative-caret-position="30">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -864,7 +722,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>Struts2</last-edited>
+          <last-edited>Struts2 archive</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -917,7 +775,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
