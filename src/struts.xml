@@ -41,9 +41,6 @@
             <result name="error">/error.jsp</result>
         </action>
         <action name="delUser" class="com.xk.action.UserAction" method="delete">
-            <interceptor-ref name="defaultStack" />
-            <interceptor-ref name="token"/>
-            <result name="invalid.token">/invalid.jsp</result>
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
