@@ -25,6 +25,7 @@
                 <td><a href="editUser.action?id=<s:property value="#user.id"/>">编辑</a><a href="delUser.action?id=<s:property value="#user.id"/>">删除</a></td>
             </tr>
         </s:iterator>
+        <s:token />
     </table>
     <p><a href="userAdd.jsp">新增用户</a></p>
     <p><a href="index.jsp">返回首页</a></p>

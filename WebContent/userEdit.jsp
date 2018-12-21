@@ -25,7 +25,7 @@
         <label for="identity">身份：</label>
         <input id="identity" name="user.identity" type="radio" value="user" checked=<s:if test="user.identity=='user'"> "checked" </s:if> />user
         <input type="radio"  name="user.identity" value="admin" <s:if test="user.identity=='admin'"> checked="checked" </s:if> />admin <br/>
-
+        <s:token />
         <input type="submit" value="更新"/>
     </s:form>
 </body>
