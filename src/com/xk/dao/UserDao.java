@@ -2,6 +2,7 @@ package com.xk.dao;
 
 import com.xk.model.User;
 import com.xk.util.SQLHelper;
+import org.apache.commons.lang3.StringUtils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -47,16 +48,15 @@ public class UserDao {
         return executeUpd(sql, parameters);
     }
 
-    //getAllUsers
+    //getUserById
     public User getUserById(int id) {
-        User user = new User();
         User userRs = new User();
+
         String sql = "select * from user where user.id =" + id;
-        String[] parameters = null;
-        ResultSet rs = SQLHelper.executeQuery(sql, parameters);
+        ResultSet rs = SQLHelper.executeQuery(sql, null);
         try {
             while (rs.next()) {
-                userRs = setUserInfo(user, rs);
+                userRs = setUserInfo(rs);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -66,42 +66,62 @@ public class UserDao {
         return userRs;
     }
 
-    //getAllUsers
-    public ArrayList<User> getAllUsers() {
-        ArrayList<User> allUsers = new ArrayList<>();
-        String sql = "select * from user";
-        ResultSet rs = SQLHelper.executeQuery(sql, null);
+    //searchUsers
+    public ArrayList<User> searchUsers(User user) {
+        ArrayList<User> users = new ArrayList<>();
+        StringBuilder sql = new StringBuilder("select * from user where 1 = 1");
+
+        if (StringUtils.isNotEmpty(user.getUsername())) {
+            sql.append(" and username like " + "'%"+ user.getUsername() + "%'");
+        }
+        if (StringUtils.isNotEmpty(user.getPassword())) {
+            sql.append(" and password like " + "'%"+ user.getPassword() + "%'");
+        }
+
+        if (StringUtils.isNotEmpty(user.getEmail())) {
+            sql.append(" and email like " + "'%"+ user.getEmail() + "%'");
+        }
+        if (StringUtils.isNotEmpty(user.getIdentity())) {
+            String [] identities =  user.getIdentity().split(", ");
+            sql.append(" and identity in (");
+            for (String id : identities) {
+                sql.append("'" + id + "',");
+            }
+            sql.append("'" + identities[0] + "')");
+        }
+
+        ResultSet rs = SQLHelper.executeQuery(sql.toString(), null);
         try {
             while (rs.next()) {
-                User user = new User();
-                allUsers.add(setUserInfo(user, rs));
+                users.add(setUserInfo(rs));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             SQLHelper.close(rs, SQLHelper.getPs(), SQLHelper.getCt());
         }
-        return allUsers;
+        return users;
     }
 
-    private boolean executeUpd(String sql, Object[] parameters){
-        try{
+    private boolean executeUpd(String sql, Object[] parameters) {
+        try {
             SQLHelper.executeUpdate(sql, parameters);
             return true;
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    private User setUserInfo(User user, ResultSet rs){
-        try{
-            user.setId(rs.getString( 1));
+    private User setUserInfo(ResultSet rs) {
+        User user = new User();
+        try {
+            user.setId(rs.getString(1));
             user.setUsername(rs.getString(2));
             user.setPassword(rs.getString(3));
             user.setEmail(rs.getString(4));
             user.setIdentity(rs.getString(5));
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return user;

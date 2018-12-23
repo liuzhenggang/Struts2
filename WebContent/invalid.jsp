@@ -9,6 +9,5 @@
 </head>
 <body>
 	<h1>重复提交!</h1>
-	<p><a href="loginUser.jsp">返回首页</a></p>
 </body>
 </html>

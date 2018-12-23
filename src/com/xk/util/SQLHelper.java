@@ -52,7 +52,7 @@ public class SQLHelper {
 		try {
 			ct = getConnection();
 			ps = ct.prepareStatement(sql);
-			if (parameters != null) {
+			if (parameters != null && parameters.length > 0) {
 				for (int i = 0; i < parameters.length; i++) {
 					ps.setString(i + 1, parameters[i].toString());
 				}

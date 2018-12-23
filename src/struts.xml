@@ -16,27 +16,18 @@
         <action name="index">
             <result>/index.jsp</result>
         </action>
-        <action name="token" class="com.xk.action.UserAction">
-
-        <result>/success.jsp</result>
-        <result name="invalid.token">/error.jsp?message=重复提交</result><!--配置name为invalid.token的result 重复提交时跳转到此页面-->
-    </action>
-    <action name="getUser" class="com.xk.action.GetUserAction" method="execute">
-            <interceptor-ref name="permissionStack"/>
-            <interceptor-ref name="defaultStack" />
-            <interceptor-ref name="token"/>
-            <result name="invalid.token">/invalid.jsp</result>
-            <result name="success">/main.jsp</result>
-            <result name="message">/message.jsp</result>
-        </action>
         <action name="getLoginUser" class="com.xk.action.UserAction" method="execute">
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
         <action name="addUser" class="com.xk.action.UserAction" method="add">
-            <interceptor-ref name="defaultStack" />
+            <interceptor-ref name="defaultStack"/>
             <interceptor-ref name="token"/>
             <result name="invalid.token">/invalid.jsp</result>
+            <result name="success">/loginUser.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="searchUser" class="com.xk.action.UserAction" method="search">
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
@@ -49,7 +40,7 @@
             <result name="error">/error.jsp</result>
         </action>
         <action name="updUser" class="com.xk.action.UserAction" method="upd">
-            <interceptor-ref name="defaultStack" />
+            <interceptor-ref name="defaultStack"/>
             <interceptor-ref name="token"/>
             <result name="invalid.token">/invalid.jsp</result>
             <result name="success">/loginUser.jsp</result>

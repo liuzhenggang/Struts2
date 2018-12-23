@@ -40,9 +40,9 @@ public class UserService {
         return userDao.getUserById(id);
     }
 
-    //getAllUsers
-    public ArrayList<User> getAllUsers() {
+    //searchUsers
+    public ArrayList<User> searchUsers(User user) {
         userDao = new UserDao();
-        return userDao.getAllUsers();
+        return userDao.searchUsers(user);
     }
 }

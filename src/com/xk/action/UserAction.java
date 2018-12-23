@@ -9,7 +9,7 @@ import org.omg.PortableInterceptor.Interceptor;
 import java.util.ArrayList;
 
 public class UserAction  extends ActionSupport {
-    private static final long serialVersionUID = 8L;
+    private static final long serialVersionUID = 18L;
 
     private User user = new User();
     private Integer id = -1;
@@ -28,7 +28,7 @@ public class UserAction  extends ActionSupport {
             user.setUsername(username);
             user.setPassword(password);
             if (userService.checkUser(user)) {
-                ArrayList<User> users = userService.getAllUsers();
+                ArrayList<User> users = userService.searchUsers(new User());
                 ac.getSession().put("currentUser", user.getUsername());
                 ac.put("users", users);
                 return SUCCESS;
@@ -44,18 +44,26 @@ public class UserAction  extends ActionSupport {
         ActionContext ac = ActionContext.getContext();
         userService = new UserService();
         if(userService.addUser(user)){
-            ArrayList<User> users = userService.getAllUsers();
+            ArrayList<User> users = userService.searchUsers(new User());
             ac.put("users", users);
             return SUCCESS;
         }
         return ERROR;
     }
 
+    public String search(){
+        ActionContext ac = ActionContext.getContext();
+        userService = new UserService();
+        ArrayList<User> users  = userService.searchUsers(user);
+        ac.put("users", users);
+        return SUCCESS;
+    }
+
     public String delete(){
         userService = new UserService();
         if(id != -1 && userService.delUser(id)){
             ActionContext ac = ActionContext.getContext();
-            ArrayList<User> users = userService.getAllUsers();
+            ArrayList<User> users = userService.searchUsers(new User());
             ac.put("users", users);
             return SUCCESS;
         }
@@ -75,7 +83,7 @@ public class UserAction  extends ActionSupport {
         ActionContext ac = ActionContext.getContext();
         userService = new UserService();
         if(userService.updUser(user)){
-            ArrayList<User> users = userService.getAllUsers();
+            ArrayList<User> users = userService.searchUsers(new User());
             ac.put("users", users);
             return SUCCESS;
         }
