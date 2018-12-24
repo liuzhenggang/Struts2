@@ -24,11 +24,15 @@
 </s:form>
 <s:if test="pageNum != 1">
 <a href="searchUser.action?pageNum=${pageNum - 1}">上一页<a/>
-    </s:if>
+</s:if>
 
-    <s:if test="pageNum != maxPage">
-    <a href="searchUser.action?pageNum=${pageNum + 1}">下一页<a/>
-        </s:if>
+<s:if test="pageNum != maxPage">
+<a href="searchUser.action?pageNum=${pageNum + 1}">下一页<a/>
+</s:if>
+
+<input value="${pageNum}">
+<input value="${maxPage}">
+
 <table border="1px" cellspacing="0" cellpadding="5">
     <s:token/>
     <tr>

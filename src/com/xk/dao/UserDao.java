@@ -112,7 +112,7 @@ public class UserDao {
         try {
             while (rs.next()) {
                 int count = Integer.parseInt(rs.getString(1));
-                maxPage = count / pageSize + 1;
+                maxPage = (count - 1) / pageSize + 1;
             }
         } catch (SQLException e) {
             e.printStackTrace();
