@@ -18,6 +18,10 @@ public class UserAction  extends ActionSupport {
     private String email;
     private String identity;
 
+    private Integer pageNum = 1;
+    private Integer maxPage = -1;
+    private static Integer pageSize = 10;
+
     private UserService userService;
     @Override
     public String execute() {
@@ -28,7 +32,9 @@ public class UserAction  extends ActionSupport {
             user.setUsername(username);
             user.setPassword(password);
             if (userService.checkUser(user)) {
-                ArrayList<User> users = userService.searchUsers(new User());
+                maxPage = userService.getMaxPage(pageSize);
+                ac.put("maxPage", maxPage);
+                ArrayList<User> users = userService.searchUsers(new User(), pageNum);
                 ac.getSession().put("currentUser", user.getUsername());
                 ac.put("users", users);
                 return SUCCESS;
@@ -44,8 +50,11 @@ public class UserAction  extends ActionSupport {
         ActionContext ac = ActionContext.getContext();
         userService = new UserService();
         if(userService.addUser(user)){
-            ArrayList<User> users = userService.searchUsers(new User());
+            maxPage = userService.getMaxPage(pageSize);
+            ac.put("maxPage", maxPage);
+            ArrayList<User> users = userService.searchUsers(new User(), pageNum);
             ac.put("users", users);
+
             return SUCCESS;
         }
         return ERROR;
@@ -54,7 +63,9 @@ public class UserAction  extends ActionSupport {
     public String search(){
         ActionContext ac = ActionContext.getContext();
         userService = new UserService();
-        ArrayList<User> users  = userService.searchUsers(user);
+        maxPage = userService.getMaxPage(pageSize);
+        ac.put("maxPage", maxPage);
+        ArrayList<User> users  = userService.searchUsers(user, pageNum);
         ac.put("users", users);
         return SUCCESS;
     }
@@ -63,7 +74,9 @@ public class UserAction  extends ActionSupport {
         userService = new UserService();
         if(id != -1 && userService.delUser(id)){
             ActionContext ac = ActionContext.getContext();
-            ArrayList<User> users = userService.searchUsers(new User());
+            maxPage = userService.getMaxPage(pageSize);
+            ArrayList<User> users = userService.searchUsers(new User(), pageNum);
+            ac.put("maxPage", maxPage);
             ac.put("users", users);
             return SUCCESS;
         }
@@ -83,8 +96,10 @@ public class UserAction  extends ActionSupport {
         ActionContext ac = ActionContext.getContext();
         userService = new UserService();
         if(userService.updUser(user)){
-            ArrayList<User> users = userService.searchUsers(new User());
+            maxPage = userService.getMaxPage(pageSize);
+            ArrayList<User> users = userService.searchUsers(new User(), pageNum);
             ac.put("users", users);
+            ac.put("maxPage", maxPage);
             return SUCCESS;
         }
             return ERROR;
@@ -136,5 +151,21 @@ public class UserAction  extends ActionSupport {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Integer getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+    }
+
+    public Integer getMaxPage() {
+        return maxPage;
+    }
+
+    public void setMaxPage(Integer maxPage) {
+        this.maxPage = maxPage;
     }
 }

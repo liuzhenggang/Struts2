@@ -22,8 +22,17 @@
     <br/>
     <input id="search" type="submit" value="搜索"/>
 </s:form>
+<s:if test="pageNum != 1">
+<a href="searchUser.action?pageNum=${pageNum - 1}">上一页<a/>
+    </s:if>
+
+    <s:if test="pageNum != maxPage">
+    <a href="searchUser.action?pageNum=${pageNum + 1}">下一页<a/>
+        </s:if>
 <table border="1px" cellspacing="0" cellpadding="5">
+    <s:token/>
     <tr>
+        <td>ID</td>
         <td>名称</td>
         <td>密码</td>
         <td>邮箱</td>
@@ -32,6 +41,7 @@
     </tr>
     <s:iterator id="user" value="users" status="status">
         <tr>
+            <td><s:property value="#user.id"/></td>
             <td><s:property value="#user.username"/></td>
             <td><s:property value="#user.password"/></td>
             <td><s:property value="#user.email"/></td>
@@ -41,7 +51,6 @@
             </td>
         </tr>
     </s:iterator>
-    <s:token/>
 </table>
 <p><a href="userAdd.jsp">新增用户</a></p>
 <p><a href="index.jsp">返回首页</a></p>

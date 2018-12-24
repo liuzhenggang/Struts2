@@ -67,7 +67,7 @@ public class UserDao {
     }
 
     //searchUsers
-    public ArrayList<User> searchUsers(User user) {
+    public ArrayList<User> searchUsers(User user, Integer pageNum) {
         ArrayList<User> users = new ArrayList<>();
         StringBuilder sql = new StringBuilder("select * from user where 1 = 1");
 
@@ -90,6 +90,7 @@ public class UserDao {
             sql.append("'" + identities[0] + "')");
         }
 
+        sql.append(" limit " + (pageNum - 1) * 10 + ",10");
         ResultSet rs = SQLHelper.executeQuery(sql.toString(), null);
         try {
             while (rs.next()) {
@@ -101,6 +102,24 @@ public class UserDao {
             SQLHelper.close(rs, SQLHelper.getPs(), SQLHelper.getCt());
         }
         return users;
+    }
+
+    public Integer getMaxPage(int pageSize){
+        int maxPage = 0;
+
+        String sql = "select count(*) from user";
+        ResultSet rs = SQLHelper.executeQuery(sql, null);
+        try {
+            while (rs.next()) {
+                int count = Integer.parseInt(rs.getString(1));
+                maxPage = count / pageSize + 1;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            SQLHelper.close(rs, SQLHelper.getPs(), SQLHelper.getCt());
+        }
+        return maxPage;
     }
 
     private boolean executeUpd(String sql, Object[] parameters) {

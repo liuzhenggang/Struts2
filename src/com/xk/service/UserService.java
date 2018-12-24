@@ -41,8 +41,13 @@ public class UserService {
     }
 
     //searchUsers
-    public ArrayList<User> searchUsers(User user) {
+    public ArrayList<User> searchUsers(User user, Integer pageNum) {
         userDao = new UserDao();
-        return userDao.searchUsers(user);
+        return userDao.searchUsers(user, pageNum);
+    }
+
+    public Integer getMaxPage (int pageSize){
+        userDao = new UserDao();
+        return userDao.getMaxPage(pageSize);
     }
 }
