@@ -7,66 +7,43 @@
     </root>
     <database id="2" parent="1" name="information_schema"/>
     <database id="3" parent="1" name="mysql"/>
-    <database id="4" parent="1" name="userdb">
+    <database id="4" parent="1" name="ssm"/>
+    <database id="5" parent="1" name="userdb">
       <Current>1</Current>
       <Visible>1</Visible>
     </database>
-    <schema id="5" parent="4">
+    <schema id="6" parent="5">
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
-    <table id="6" parent="5" name="user"/>
-    <table id="7" parent="5" name="user_t"/>
-    <column id="8" parent="6" name="id">
+    <table id="7" parent="6" name="user"/>
+    <column id="8" parent="7" name="id">
       <Position>1</Position>
       <DataType>INT(10)|4s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="9" parent="6" name="username">
+    <column id="9" parent="7" name="username">
       <Position>2</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="10" parent="6" name="PASSWORD">
+    <column id="10" parent="7" name="password">
       <Position>3</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="11" parent="6" name="email">
+    <column id="11" parent="7" name="email">
       <Position>4</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <column id="12" parent="6" name="identity">
+    <column id="12" parent="7" name="identity">
       <Position>5</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <key id="13" parent="6" name="PRIMARY">
+    <index id="13" parent="7" name="PRIMARY">
       <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="14" parent="7" name="id">
-      <Position>1</Position>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="15" parent="7" name="user_name">
-      <Position>2</Position>
-      <DataType>VARCHAR(40)|12s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-    </column>
-    <column id="16" parent="7" name="password">
-      <Position>3</Position>
-      <DataType>VARCHAR(255)|12s</DataType>
-      <NotNull>1</NotNull>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
-    </column>
-    <column id="17" parent="7" name="age">
-      <Position>4</Position>
-      <DataType>INT(10)|4s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="18" parent="7" name="PRIMARY">
+      <Unique>1</Unique>
+    </index>
+    <key id="14" parent="7" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
