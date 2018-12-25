@@ -46,6 +46,10 @@ public class UserAction  extends ActionSupport {
         }
     }
 
+    public String goAdd(){
+        return SUCCESS;
+    }
+
     public String add(){
         ActionContext ac = ActionContext.getContext();
         userService = new UserService();

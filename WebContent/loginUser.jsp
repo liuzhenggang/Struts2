@@ -22,6 +22,8 @@
     <br/>
     <input id="search" type="submit" value="搜索"/>
 </s:form>
+<a>当前页：</a>${pageNum}
+<a>总页数：</a>${maxPage}
 <s:if test="pageNum != 1">
 <a href="searchUser.action?pageNum=${pageNum - 1}">上一页<a/>
 </s:if>
@@ -29,9 +31,6 @@
 <s:if test="pageNum != maxPage">
 <a href="searchUser.action?pageNum=${pageNum + 1}">下一页<a/>
 </s:if>
-
-<input value="${pageNum}">
-<input value="${maxPage}">
 
 <table border="1px" cellspacing="0" cellpadding="5">
     <s:token/>
@@ -50,13 +49,13 @@
             <td><s:property value="#user.password"/></td>
             <td><s:property value="#user.email"/></td>
             <td><s:property value="#user.identity"/></td>
-            <td><a href="editUser.action?id=<s:property value="#user.id"/>">编辑</a>
-                <a href="delUser.action?id=<s:property value="#user.id"/>">删除</a>
+            <td><a href="editUser.action?id=<s:property value="#user.id"/>&pageNum=${pageNum}">编辑</a>
+                <a href="delUser.action?id=<s:property value="#user.id"/>&pageNum=${pageNum}">删除</a>
             </td>
         </tr>
     </s:iterator>
 </table>
-<p><a href="userAdd.jsp">新增用户</a></p>
+<p><a href="goAdd.action?pageNum=${pageNum}">新增用户</a></p>
 <p><a href="index.jsp">返回首页</a></p>
 </body>
 </html>

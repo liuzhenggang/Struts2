@@ -23,6 +23,7 @@
         <input id="identity" name="user.identity" type="radio" value="user" checked="checked"/>user
         <input name="user.identity" type="radio" value="admin"/>admin <br/>
         <s:token />
+        <input name="pageNum" value="${pageNum}" type="hidden" />
         <input type="submit" value="添加"/>
     </s:form>
 </body>

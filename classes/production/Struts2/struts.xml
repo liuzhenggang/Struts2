@@ -16,17 +16,22 @@
         <action name="index">
             <result>/index.jsp</result>
         </action>
-        <action name="getUser" class="com.xk.action.GetUserAction" method="execute">
-            <interceptor-ref name="permissionStack"/>
-            <result name="success">/main.jsp</result>
-            <result name="message">/message.jsp</result>
-        </action>
         <action name="getLoginUser" class="com.xk.action.UserAction" method="execute">
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
+        <action name="goAdd" class="com.xk.action.UserAction" method="goAdd">
+            <result name="success">/userAdd.jsp</result>
+        </action>
         <action name="addUser" class="com.xk.action.UserAction" method="add">
-            <result name="success">/success.jsp</result>
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="token"/>
+            <result name="invalid.token">/invalid.jsp</result>
+            <result name="success">/loginUser.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="searchUser" class="com.xk.action.UserAction" method="search">
+            <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
         <action name="delUser" class="com.xk.action.UserAction" method="delete">
@@ -38,6 +43,9 @@
             <result name="error">/error.jsp</result>
         </action>
         <action name="updUser" class="com.xk.action.UserAction" method="upd">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="token"/>
+            <result name="invalid.token">/invalid.jsp</result>
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>

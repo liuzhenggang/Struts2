@@ -20,6 +20,9 @@
             <result name="success">/loginUser.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
+        <action name="goAdd" class="com.xk.action.UserAction" method="goAdd">
+            <result name="success">/userAdd.jsp</result>
+        </action>
         <action name="addUser" class="com.xk.action.UserAction" method="add">
             <interceptor-ref name="defaultStack"/>
             <interceptor-ref name="token"/>
