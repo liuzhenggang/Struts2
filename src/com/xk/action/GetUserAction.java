@@ -7,6 +7,10 @@ import com.xk.model.User;
 public class GetUserAction implements Action {
     private User user = new User();
 
+    public static void main(String[] args) {
+        System.out.print("hello");
+    }
+    
     @Override
     public String execute() {
         user.setUsername("weixinya");

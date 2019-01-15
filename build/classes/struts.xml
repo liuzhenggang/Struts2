@@ -1,19 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC
-	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-	"http://struts.apache.org/dtds/struts-2.0.dtd">
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	<constant name="struts.devMode" value="false" />
-	<package name="Struts2" extends="struts-default">
-		<action name="index">
-			<result>/index.jsp</result>
-		</action>
-		<action name="getUser" class="com.xk.action.GetUserAction" method="execute">
-			<result name="success">/main.jsp</result>
-		</action>
-		<action name="getLoginUser" class="com.xk.action.GetLoginUserAction" method="execute">
-		<result name="success">/loginUser.jsp</result>
-			<result name="error">/error.jsp</result>
-	</action>
-	</package>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+    <constant name="struts.devMode" value="true"/>
+    <package name="Struts2" extends="struts-default">
+        <interceptors>
+            <interceptor name="permission" class="com.xk.interceptor.PermissionInterceptor"/>
+            <interceptor-stack name="permissionStack">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="permission"/>
+            </interceptor-stack>
+        </interceptors>
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+        <action name="getLoginUser" class="com.xk.action.UserAction" method="execute">
+            <result name="success">/loginUser.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="goAdd" class="com.xk.action.UserAction" method="goAdd">
+            <result name="success">/userAdd.jsp</result>
+        </action>
+        <action name="addUser" class="com.xk.action.UserAction" method="add">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="token"/>
+            <result name="invalid.token">/invalid.jsp</result>
+            <result name="success">/loginUser.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="searchUser" class="com.xk.action.UserAction" method="search">
+            <result name="success">/loginUser.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="delUser" class="com.xk.action.UserAction" method="delete">
+            <result name="success">/loginUser.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="editUser" class="com.xk.action.UserAction" method="edit">
+            <result name="success">/userEdit.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="updUser" class="com.xk.action.UserAction" method="upd">
+            <interceptor-ref name="defaultStack"/>
+            <interceptor-ref name="token"/>
+            <result name="invalid.token">/invalid.jsp</result>
+            <result name="success">/loginUser.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+    </package>
 </struts>
